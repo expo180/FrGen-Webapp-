@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Acceuil - frame genesis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainstyles.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gajraj+One&family=Gloock&family=Inter:wght@100;
+	200;300;900&family=Open+Sans:wght@300&family=Poppins:wght@400;500;900&family=Questrial&family=Roboto:ital,
+	wght@0,900;1,700&family=Urbanist:wght@800&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
+</head>
+<body>
+	<main>
+		{% include 'header.html' %}
+	<section class="main-section">
+		<section  id="Accueil" class="section-one">
+			<div class="section-one-paragraph">
+				<div>
+					<h1 id="first-heading" class="number-one">La technologie est le futur</h1>
+				</div>
+				<div class="right"></div>
+				<div class="section-one-class">
+					<p class="first-paragraph">
+						<strong>La technologie et l'informatique ont apporté de nombreux bienfaits dans notre vie quotidienne, en facilitant les tâches quotidiennes. Les progrès en matière de puissance de calcul, de stockage de données et de connectivité ont permis la création de dispositifs toujours plus performants, tels que les ordinateurs portables, les smartphones et les tablettes. Les applications informatiques, les réseaux sociaux et les plateformes de streaming ont également eu un impact significatif sur la façon dont nous interagissons avec le monde qui nous entoure.</strong> En outre, la technologie a également permis de faire des avancées majeures dans de nombreux domaines, tels que la médecine, la recherche scientifique, l'industrie et l'agriculture. Avec l'augmentation constante des capacités technologiques, nous pouvons nous attendre à de nouvelles découvertes et à des innovations encore plus importantes dans les années à venir. <strong>Que vous soyez débutant ou professionnel,</strong> notre plateforme vous offre des <strong>cours de très haute qualité</strong> qui vous permettrons non seulement de construire des <strong>bases solides</strong> mais aussi de <strong>peaufiner</strong> vos connaissances avec une <strong>approche pluridisciplinaire</strong>.
+					</p>
+				</div>
+				<div class="call-to">
+					<a href="{{url_for('nouvel_utilisateur')}}" id="inscrip">S'inscrire</a>
+					<a href="{{url_for('courses')}}" id="sav">En savoir plus</a>
+				</div>
+			</div>
+			<div>
+				<img src="{{ url_for('static', filename='media/coder.png')}}" class="hero-img" loading="lazy">
+			</div>
+		</section>
+		<section id="cours" class="section-two">
+			<h1 id="first-heading" class="number-one">Nos Cours et Formations</h1>
+			<div class="right"></div>
+			<div class="courses-container">
+				<div class="python-courses">
+					<div class="courses-desc">
+						<img src="{{url_for('static', filename='/media/python.png')}}" class="courses-icons" loading="lazy">
+						<h3 class="courses-head" id="un">Conception d'applications Mobiles et Desktop avec le langage Python</h3> 
+					</div>
+					<div class="main-courses">
+						<p class="text-desc">
+							Le language <strong>Python</strong> est l'un des langages de progammmation les plus polulaires au monde vu <strong>sa simplicité</strong> et sa <strong>versatilité,</strong> Python est le langage le plus aimé par les programmeurs. Dans ce cours <strong>nous</strong> vous aiderons à maîtriser <strong>les bases de la programmation en Python</strong> jusqu'aux notions avancées telles que <strong>l'intelligence artificielle, les sciences de données, l'apprentissage machine</strong> et aussi le <strong>dévelopement d'applications Android et Desktop</strong>.
+						</p>
+					</div>
+				</div>
+				<div class="unity-courses">
+					<div class="courses-desc">
+						<img src="{{url_for('static', filename='/media/unity.png')}}" class="courses-icons" loading="lazy">
+						<h3 class="courses-head" id="deux">Développement de jeux vidéos avec le moteur Unity</h3>
+					</div>
+					<div class="main-courses">
+						<p class="text-desc">
+							Le <strong>game design</strong> est le domaine le plus excitant de la tech. Ici nous vous proposons une <strong>introduction gratuite</strong>sur <strong>le développement de jeux vidéos avec l'un des meilleurs moteurs de développement:</strong> le moteur Unity. Vous verrez que le développement de <strong>jeux vidéos</strong> n'est pas aussi amusant que le jeu lui même. En effet, de bases solides en géométrie analytique et en logique sont nécessaires tout au cours tout <strong>au cours du développement</strong>.						
+						</p>
+					</div>
+				</div>
+				<div class="machine-courses">
+					<div class="courses-desc">
+						<img src="{{url_for ('static', filename='/media/excel.png')}}" class="courses-icons" loading="lazy">
+						<h3 class="courses-head" id="trois">Analyse et visualisation de données avec Microsoft Excel</h3>
+					</div>
+					<div class="main-courses">
+						<p class="text-desc">
+							L' <strong>analyse de données</strong> est essentielle dans <strong>l'optimisation de la production et la gestion des ressources au sein d'une entreprise</strong>. Les outils de calcul de <strong>Microsoft Excel <sup>&reg</sup></strong> permettent aux <strong>analystes et directeurs marketing</strong> de faire des prédictions <strong>rapidement</strong> et sans <strong>aucune erreur</strong>. En cette époque savoir utiliser les <strong>outils de développement</strong> proposés par <strong>Excel</strong> est plus que nécessaire. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+			<div>
+				<img src="{{url_for('static', filename='/media/team.png')}}" class="loser-img" loading="lazy">
+			</div>
+			<div class="about-paragraph">
+				<h1 id="first-heading" class="number-one">A propos</h1>
+				<div class="right"></div>
+				<p class="first-paragraph">
+					Nous sommes une équipe de <strong>designers</strong>, de <strong>scientifiques</strong> et <strong>d'ingénieurs</strong> dont le but est de défendre <strong>les valeurs fondamentales des sciences et de l' ingénierie.</strong> <strong>Le monde, les pays en voie de développemnent</strong> connaissent beaucoup de challenges sur divers plans, il est de ce fait <strong>plus que nécessaire</strong> d' aider le monde à se rappeler des <strong>fondements de la science et de l' ingénierie</strong>. <strong>De Démocrite , à Galilée</strong> nous voyagerons à travers le temps, nous essaierons de comprendre quels ont été <strong>les avantages</strong> de leurs découvertes pour la <strong>société humaine</strong> et nous reviendrons dans le présent, afin de pousser nos réflexions, sur les thèmes d'actualité comme  <strong>le design d' expérience utilisateur</strong>, l' intelligence artificielle. <strong>Préserver la science est notre façon d'aider le monde à avancer</strong>. 
+				</p>
+				<div class="call-to">
+					<a href="{{url_for('gift')}}" id="inscrip">Faire un don</a>
+					<a href="{{url_for('courses')}}" id="sav">En savoir plus</a>
+				</div>
+
+			</div>
+		</section>
+	</section>
+	{% include 'footer.html' %}
+</main>
+</body>
+</html>

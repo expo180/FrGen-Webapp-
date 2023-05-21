@@ -1,0 +1,247 @@
+@import url('mainstyles.css');
+:root{
+	--first-color1:#281259; /*main background color*/
+	--first-color2:#341773; /*secondary color*/
+	--second-color1:#6B71F2;
+	--btn-txtcolor1:white;
+	--btn-bgcolor1:#5433FF;
+	--btn-bgcolor2:#20BDFF;
+	--call-to1:#EC008C;
+	--call-to2:#FC6767;
+	--third-color1:#E2BD00;
+	--third-color2:#FFE610;
+}
+@media(min-width:298px){
+	.tuto{
+		display:flex;
+		flex-direction:column;
+		gap:3em;
+
+	}
+	.tut-pts > li > a{
+		color:white;
+		font-family:'Urbanist', sans-serif;
+		font-weight:800;
+		font-size:1.2rem;
+	}
+	ul{
+		display:flex;
+		flex-direction:column;
+		gap:1em;
+	}
+	.contain-all{
+		border:solid 2px white;
+		padding:4em 2em;
+		margin:7em 3em;
+		border-radius:15px;
+	}
+	.ls-img{
+		width:100%;
+		max-width:200px;
+		min-width:50px;
+	}
+	h1.tuto-title{
+		font-family:'Urbanist', sans-serif;
+		font-weight:800;
+		font-size:2rem;
+		color:white;
+		margin:1em 1em;
+		border-left:solid 5px var(--btn-bgcolor2);
+		padding-left:0.5em;
+	}
+	pre{
+		background:linear-gradient(var(--call-to1), var(--call-to2));
+		padding:2em 2em;
+		color:white;
+		font-family:'Urbanist', sans-serif;
+		font-size:0.5rem;
+		border:solid 2px white;
+		border-radius:8px;
+		line-height:1.5em;
+	}
+	.css{
+		background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
+		padding:2em 2em;
+		color:white;
+		font-family:'Urbanist', sans-serif;
+		font-size:1rem;
+		border:solid 2px white;
+		border-radius:8px;
+		line-height:1.5em;
+
+	}
+	.steps-head{
+		color:white;
+		font-family:'Urbanist', sans-serif;
+		font-size:1.5rem;
+	}
+	.illustration{
+		width:100%;
+		max-width:600px;
+		min-width:200px;
+		display:block;
+		margin:0 auto;
+		border:solid 2px var(--btn-bgcolor2);
+	}
+	.steps{
+		display:flex;
+		flex-direction:column;
+		gap:2em;
+	}
+	.steps-exp{
+		display:flex;
+		flex-direction:column;
+		gap:3em;
+	}
+
+	.inline{
+		display:grid;
+		grid-template-columns:20px 200px;
+		gap:1em;
+	}
+	.tut-icons{
+		width:20px;
+	}
+	.tut-pts-req{
+		display:flex;
+		flex-direction:column;
+		gap:1em;
+	}
+	.tut-pts{
+		font-weight:800;
+		font-family:'Urbanist', sans-serif;
+		font-size:1.2rem;
+		color:white;
+		margin:2em 1em;
+	}
+	.tut-head{
+		font-family:'Urbanist', sans-serif;
+		color:white;
+		font-size:1.5rem;
+		text-transform:uppercase;
+		border-bottom:solid var(--btn-bgcolor2) 1px;
+		padding-bottom:2em;
+		padding-left:1em;
+		padding-top:0.6em;
+	}
+	.steps-exp-par{
+		color:white;
+		font-size:1rem;
+	}
+	h1.sts-hds{
+		font-family:'Montserrat', sans-serif;
+		color:white;
+		font-weight:700;
+		font-size:1.4rem;
+	}
+	em{
+		font-style:normal;
+	}
+	.pre, .objec, .concepts, .tut-line{
+		display:flex;
+		flex-direction:column;
+		gap:3em;
+		border-radius:10px;
+	}
+	.pre, .objec, .concepts{
+		background-color:var(--first-color1);
+		padding:2em 0;	
+	}
+	.pre, .objec, .concepts{
+		border:solid 2px var(--btn-bgcolor2);
+	}
+	a.usefool-links{
+		color:white;
+		font-family:'Urbanist', sans-serif;
+		font-weight:800;
+	}
+	.version{
+		color:var(--btn-bgcolor2);
+	}
+}
+@media(min-width:360px){
+	h1.tuto-title{
+		font-size:2.2rem;
+	}
+	h1.sts-hds{
+		font-size:1.8rem;
+	}
+	.tut-pts > li > a{
+		font-size:1.4rem;
+	}
+
+}
+@media(min-width:430px){
+	h1.tuto-title{
+		font-size:2.7rem;
+	}
+	h1.sts-hds{
+		font-size:2.2rem;
+	}
+}
+@media(min-width:580px){
+	h1.tuto-title{
+		font-size:3rem;
+	}
+	h1.sts-hds{
+		font-size:2.4rem;
+	}
+
+}
+@media(min-width:600px){
+	h1.tuto-title{
+		font-size:4rem;
+	}
+	h1.sts-hds{
+		font-size:2.6rem;
+	}
+	.steps-head{
+		font-size:2rem;
+	}
+	.steps-exp-par{
+		font-size:1.6rem;
+	}
+
+
+}
+@media(min-width:700px){
+	h1.sts-hds{
+		font-size:2.8rem;
+	}
+}
+@media(min-width:879px){
+	h1.tuto-title{
+		font-size:.4.4rem;
+	}
+}
+@media(min-width:929px){
+	h1.tuto-title{
+		font-size:4.9rem;
+	}
+	h1.sts-hds{
+		font-size:3.2rem;
+	}
+	pre{
+		font-size:1rem;
+	}
+	.css{
+		font-size:1.5rem;
+	}
+
+}
+@media(min-width:1013px){
+	h1.tuto-title{
+		font-size:5.2rem;
+	}
+	.tut-pts > li > a:hover{
+		color:var(--btn-bgcolor2);
+
+	}
+	a.usefool-links:hover{
+		color:var(--btn-bgcolor2);
+
+
+	}
+
+}
+

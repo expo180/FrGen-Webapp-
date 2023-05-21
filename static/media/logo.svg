@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="50"
+   viewBox="0 0 300 50"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <g
+       id="g1"
+       style="fill:#ffffff;fill-opacity:0.988235">
+      <path
+         id="path6"
+         style="fill:#e9e9ff;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="M 38.436582,14.649787 57.315288,7.2404589 V 41.39832 L 38.436582,39.446574 Z"
+         points="57.315288,7.2404589 57.315288,41.39832 38.436582,39.446574 38.436582,14.649787 " />
+      <path
+         id="path1"
+         style="fill:#353564;fill-rule:evenodd;stroke:none;stroke-width:0.681959;stroke-linejoin:round"
+         d="M 23.515877,13.620305 V 39.717758 L 38.436582,39.446574 V 14.649787 Z"
+         points="23.515877,39.717758 38.436582,39.446574 38.436582,14.649787 23.515877,13.620305 " />
+      <path
+         id="path5"
+         style="fill:#afafde;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="M 23.515877,39.717758 37.738262,41.923297 57.315288,41.39832 38.436582,39.446574 Z"
+         points="37.738262,41.923297 57.315288,41.39832 38.436582,39.446574 23.515877,39.717758 " />
+      <path
+         id="path2"
+         style="fill:#4d4d9f;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="M 23.515877,13.620305 37.738262,5.2475133 57.315288,7.2404589 38.436582,14.649787 Z"
+         points="37.738262,5.2475133 57.315288,7.2404589 38.436582,14.649787 23.515877,13.620305 " />
+      <path
+         id="path4"
+         style="fill:#44ebff;fill-opacity:0.988235"
+         d="M 37.738262,5.2475133 V 41.923297 L 57.315288,41.39832 V 7.2404589 Z"
+         points="37.738262,41.923297 57.315288,41.39832 57.315288,7.2404589 37.738262,5.2475133 " />
+      <path
+         id="path3"
+         style="fill:#00c8ff;fill-opacity:0.811604"
+         d="M 23.515877,13.620305 37.738262,5.2475133 V 41.923297 L 23.515877,39.717758 Z"
+         points="37.738262,5.2475133 37.738262,41.923297 23.515877,39.717758 23.515877,13.620305 " />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;line-height:1.25;font-family:sans-serif"
+       x="67.655388"
+       y="31.590626"
+       id="text6"><tspan
+         id="tspan6"
+         x="67.655388"
+         y="31.590626"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#ffffff">frame genesis</tspan></text>
+  </g>
+</svg>

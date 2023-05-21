@@ -1,0 +1,67 @@
+@import 'mainstyles.css';
+
+@media (min-width:298px) {
+    .e-banking{
+        max-width:500px;
+    }
+    .bank{
+        background-color: #fff;
+        padding:5em 5em;
+    }
+    h1{
+        color:var(--first-color1);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size:2rem;
+    }
+    .terms-main-text{
+        color:var(--first-color1);
+    }
+    a#terms-two{
+        font-size:0.8rem;
+        padding:0.5em 0.5em;
+        border: solid 2px var(--first-color1);
+        color:white;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight:500;
+        background-color:var(--btn-bgcolor1);
+
+    }
+    a#terms-link{
+        font-size:0.8rem;
+        padding:0.5em 0.5em;
+        border: solid 2px var(--first-color1);
+        color:var(--first-color1);
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight:500;
+    }
+    a#terms-link:hover{
+        color:white;
+        background-color:var(--btn-bgcolor1);
+        border-color:var(--btn-bgcolor1);
+
+    }
+}
+@media (min-width:1000px) {
+    h1{
+        font-size:4.9rem;
+    }
+    a#terms-link{
+        font-size: 1.1rem;
+    }
+    a#terms-two{
+        font-size:1.1rem;
+    }
+}
+@media (min-width:1200px) {
+
+    a#terms-link{
+        font-size: 1.5rem;
+    }
+    a#terms-two{
+        font-size:1.5rem;
+    }   
+    
+}

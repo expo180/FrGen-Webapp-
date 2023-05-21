@@ -1,0 +1,166 @@
+@import 'mainstyles.css';
+@media(min-width:298px){
+	.web-dev{
+		display:flex;
+		flex-direction:column;
+		margin:0 auto;
+		width:90vw;
+		padding:15em 0;
+		gap:8em;
+	}
+	input[type="text"]{
+		width:100%;
+		padding:0.5em 0.5em;
+		border:solid 2px white;
+		border-top-right-radius:20px;
+		border-bottom-right-radius:20px;
+		color:var(--first-color);
+		font-size:0.8rem;
+		font-family:'Poppins', sans-serif;
+		font-weight:500;
+	}
+	input[type="text"]:focus{
+	    outline:none;
+	}
+	button.fa-search{
+		font-size:18px;
+	}
+	button{
+		padding:0.5em 0.8em;
+		border:none;
+		background-color:white;
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+		box-shadow:1px 0px 20px black;
+		cursor:pointer;
+		
+	}
+	.web-dev-courses{
+		display:flex;
+		flex-direction:column;
+		margin:0 2em;
+		padding:5em 2em;
+		gap:5em;
+		border-top:solid 2px white;
+	}
+	.column{
+		display:flex;
+		flex-direction:column;
+		gap:1em;
+		padding:5em 3.5em;
+		background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
+		border:solid 2px white;
+		border-radius:10px;
+
+	}
+	.courses-title, .courses-description, .courses-duration, .price, .niveau, .état{
+		color:white;
+		font-family:'Poppins', sans-serif;
+
+	}
+	.niveau{
+		border-bottom:solid 4px var(--btn-bgcolor2);
+		padding:0.5em 0.5em;
+		width:25%;
+		font-size:1rem;
+		font-weight:500;
+
+	}
+	.état{
+		font-size:1rem;
+		font-weight:500;
+	}
+
+	.courses-description{
+		font-size:0.8rem;
+	}
+	.courses-title{
+		font-weight:500;
+		font-size:1.2rem;
+		border-bottom:solid 1px white;
+		padding-bottom:1em;
+	}
+	.inline{
+		display:flex;
+	}
+	.price{
+		font-weight:500;
+		font-size:1.2rem;
+		background-color:var(--call-to1);
+		padding:0.5em 0.5em;
+		border-left:solid 4px white;
+		margin-bottom:1em;
+	}
+	.courses-duration{
+		font-size:1.2rem;
+		font-weight:500;
+		color:var(--btn-bgcolor1);
+		background-color:white;
+		padding:0.5em 0.5em;
+		border-left:solid 4px var(--btn-bgcolor2);
+	}
+	.btn{
+		display:flex;
+		gap:1em;
+	}
+	.aper{
+		background:none;
+		border:solid 1px white;
+		color:white;
+		font-family:'Poppins', sans-serif;
+		font-weight:500;
+		font-size:1.2rem;
+		box-shadow:none;
+		border-radius:10px;
+		padding:0.5em 0.8em;
+		text-decoration:none;
+
+	}
+	.buy{
+		background:none;
+		border:solid 1px white;
+		color:white;
+		font-family:'Poppins', sans-serif;
+		font-weight:500;
+		font-size:1.2rem;
+		box-shadow:none;
+		border-radius:10px;
+		padding:0.5em 1em;
+		text-decoration:none;
+
+	}
+
+	.buy:hover, .aper:hover{
+		color:var(--btn-bgcolor1);
+		background-color:white;
+	}
+
+}
+@media (min-width:768px){
+	input[type="text"]{
+		padding:1em 1em;
+		font-size:1.2rem;
+	}
+	.web-dev{
+		width:75vw;
+	}
+	.courses-title{
+		font-size:2rem;
+	}
+	.buy, .aper{
+		font-size:1.8rem;
+
+	}
+	.courses-description{
+		font-size:1.2rem;
+	}
+	.price{
+		font-size:1.8rem;
+
+	}
+	.courses-duration{
+		font-size:1.8rem;
+
+	}
+
+}

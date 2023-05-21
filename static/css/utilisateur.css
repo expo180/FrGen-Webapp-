@@ -1,0 +1,543 @@
+@media(max-width:298px){
+  body{
+    display:none;
+  }
+  
+}
+
+@media(min-width:298px){
+  :root{
+    --first-color1:#281259; /*main background color*/
+    --first-color2:#341773; /*secondary color*/
+    --second-color1:#6B71F2;
+    --btn-txtcolor1:white;
+    --btn-bgcolor1:#5433FF;
+    --btn-bgcolor2:#20BDFF;
+    --call-to1:#EC008C;
+    --call-to2:#FA7DDC;
+    --third-color1:#E2BD00;
+    --third-color2:#FFE610;
+
+  }
+  .flags{
+    width: 100%;
+    min-width:10px;
+    max-width:20px;
+    padding:0.2em 0.2em;
+  }
+  .flags:hover{
+    border:solid 1px white;
+  }
+  .account-details{
+    display: flex;
+    flex-direction: column;
+    gap:0.2em;
+    margin-top:0.5em;
+  }
+  .account-icon{
+    width:100%;
+    max-width:30px;
+    border:solid 2px white;
+    padding:0.2em 0.2em;
+    border-radius:20px;
+
+  }
+  .flags-col{
+    display:flex;
+    flex-direction:row;
+    gap:0.2em;
+    justify-content: center;
+    align-items:center;
+  }
+  .history-information{
+    display: flex;
+    flex-direction:column;
+    gap:0.2em;
+  }
+  .his-i{
+    width:100%;
+    max-width:18px;
+  }
+  .analytics-table{
+    display: none;
+  }
+  #analytics-icon{
+    cursor:pointer;
+  }
+  .account-owner, .account-id{
+    color:white;
+    font-family:'Poppins', sans-serif;
+    font-size:0.5rem;
+    display: flex;
+    flex-direction:row;
+    gap:0.5em;
+  }
+  .history{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .historyy-information-item-gain{
+    display: flex;
+    flex-direction:row;
+    font-family:'Poppins', sans-serif;
+    font-size:0.5rem;
+    font-weight:500;
+    color:white;
+
+  }
+  table {
+    width:50%;
+    margin:5em auto;
+    font-family:'Poppins', sans-serif;
+    font-weight:500;
+  }
+  th{
+    padding: 7px 10px 10px 10px;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:0.6rem;
+    
+  }
+  tr.light{
+    background:white;
+    color:var(--btn-bgcolor1);
+  }
+  td{
+    padding: 7px 10px 10px 10px;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:0.6rem;
+
+  }
+  th {
+    letter-spacing: 0.1em;
+    font-size:0.6rem;
+    border-bottom: 2px solid var(--btn-bgcolor2);
+    border-top: 4px solid white;
+  
+    text-align: left;
+  }
+    tr.even {
+    background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
+    color:white;
+  }
+    tr:hover {
+    background:var(--btn-bgcolor3);
+    color:var(--btn-bgcolor1);
+    }
+
+  .history-icons{
+    display:flex;
+    flex-direction:row;
+    gap:0.5em;
+  }
+  .inline{
+    display:grid;
+    grid-template-columns:30px 200px;
+    gap:1.3em;
+  }
+  .footer-links{
+    display: flex;
+    flex-direction:column;
+    gap:1em;
+  }
+  footer{
+    display: flex;
+    flex-direction:column;
+    gap:2.3em;
+    justify-self: center;
+    align-items:center;
+    padding:4em 2em;
+    text-align:center;
+    background:linear-gradient(90deg,var(--btn-bgcolor1)70%, var(--btn-bgcolor2));
+    box-shadow:1px 0px 20px black;
+    margin-top:2em;
+  }
+  footer a{
+    color:white;
+    text-decoration:none;
+    font-family:'Poppins', sans-serif;
+    font-size:1rem;
+  }
+  footer a:hover{
+    text-decoration: underline;
+  }
+
+  .profil-hidden{
+    display: none;
+  }
+  .active-profile{
+    background:none;
+    margin:0 auto;
+    max-width:800px;
+    border:none;
+    display: flex;
+    flex-direction:column;
+
+  }
+  .active-bank{
+    background:none;
+    margin:0 auto;
+    border:none;
+    max-width:800px;
+    display: flex;
+    flex-direction:column;
+  }
+  .banking-op{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin:5em 0;
+    gap:2em;
+    cursor:pointer;
+  }
+  .bank-icons{
+    width:100%;
+    max-width:40px;
+    background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
+    padding:0.5em 0.5em;
+    border-radius:40px;
+    border:solid 2px white;
+    opacity:93.5%;
+  }
+  .bank-icons:hover{
+    opacity:100%;
+    box-shadow:1px 0px 20px black;
+    transform: translateY(-0.6em);
+    background: cyan;
+  }
+  .account-info-one{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(90deg,var(--btn-bgcolor1)70%, var(--btn-bgcolor2));
+    padding:1em 2em;
+    color:white;
+    width:70%;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px;
+    border-top:14px solid white;
+    box-shadow:1px 0px 20px #000;
+    margin-top:2em;
+
+
+  }
+  .bank-last-line{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+  .sets{
+    width:32px;
+  }
+  h4{
+    font-family:'Poppins', sans-serif;
+    color:white;
+    font-weight:500;
+    font-size:1.2rem;
+    margin-top:0;
+  }
+  em{
+    font-family:'Times New Roman', serif;
+    color:var(--btn-bgcolor2)
+  }
+  .profile-icon{
+    max-width:40px;
+    width:100%;
+  }
+  .bank-head{
+    display: flex;
+    flex-direction:row;
+  }
+
+  .bank-first-line{
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+  }
+  .balance{
+    background-color:white;
+    padding:0.5em 1em;
+    font-size:0.7rem;
+    color:var(--btn-bgcolor1);
+    border-radius:10px;
+  }
+  .net-worth{
+    font-size:1rem;
+
+  }
+  .cours-hidden{
+    display: none;
+  }
+  .bilan-hidden{
+    display: none;
+
+  }
+  .certification-hidden{
+    display: none;
+
+  }
+  .bank-hidden{
+    display: none;
+
+  }
+  .jeux-hidden{
+    display: none;
+
+  }
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color:var(--first-color1);
+  }
+
+  header {
+    background:linear-gradient(90deg, var(--btn-bgcolor1) 20%, var(--btn-bgcolor2));
+    color: #fff;
+    padding:0.5em 0.4em;
+    display:flex;
+  }
+  .logout-img{
+    width:100%;
+    min-width:10px;
+    max-width:30px;
+    padding:0.2em 0.2em;
+    border:solid 2px white;
+    border-radius:40px;
+  }
+  .logout-img:hover{
+    border-color:var(--call-to2);
+    
+    
+  }
+  .logout{
+    display: flex;
+    position: absolute;
+    flex-direction:row;
+    top:0.6em;
+    right:0.8em;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap:0.3em;
+    padding:0;
+    background-color:#f2f2f2;
+    justify-content: center;
+  }
+  .header-img{
+    width:25px;
+  }
+
+  nav li{
+    margin: 0;
+  }
+  input["checkbox"]{
+    display:none;
+  }
+
+  nav a{
+    font-size:0.4rem;
+    display: block;
+    padding-left:0.5em;
+    padding-right:0.5em;
+    padding-top:1em;
+    border-bottom:solid 8px var(--btn-bgcolor2);
+    box-shadow:1px 0px 20px black;
+    height:30px;
+    opacity:94.8%;
+    width:40px;
+    background-color:var(--first-color1);
+    color:white;;
+    text-align:center;
+    text-decoration: none;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+  }
+  .visible{
+    opacity:100%;
+    border-color:white;
+    color:var(--btn-bgcolor1);
+
+  }
+
+  nav a:hover {
+    opacity:100%;
+    border-color:white;
+    color:var(--btn-bgcolor1);
+  }
+  }
+
+  main {
+    padding: 20px;
+    margin:2em auto;
+    max-width:800px;
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+  }
+  a.test{
+    font-family:'Poppins', sans-serif;
+    font-weight:500;
+    color:white;
+    text-decoration:none;
+    padding:0.8em 0.7em;
+    border:solid 1px white;
+    width:100px;
+    margin-bottom:1em;
+    background:none;
+    font-size:0.5rem;
+    display: flex;
+    flex-direction:row;
+    gap:0.5em;
+  }
+  .open{
+    max-width:12px;
+  }
+  div{
+    display: flex;
+    flex-direction:column;
+    gap:1em;
+  }
+  .description{
+    width:100%;
+    min-width:50px;
+    max-width:80px;
+    margin-bottom:1em;
+  }
+  #welcome{
+    color:white;
+    border:none;
+    padding:0 0;
+    background:none;
+  }
+
+  .logo{
+    width:100%;
+    max-width:150px;
+    min-width:100px;
+  }
+  a.test:hover{
+    background-color:var(--btn-bgcolor1);
+
+  }
+  #bilan, #skills, #online, #strategy-games{
+    display:flex;
+    flex-direction:column;
+    gap:2em;
+    
+  }
+  section {
+    margin-bottom: 20px;
+    border: 4px solid white;
+    padding:30px;
+    border-radius:40px;
+    background:linear-gradient(var(--btn-bgcolor1)50%, var(--btn-bgcolor2));
+   
+  }
+  a.use{
+    color:white;
+  }
+
+  h1{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:1.1rem;
+  } 
+  h2, h3 {
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    margin-top: 0;
+    color:white;
+    font-size:1.1rem;
+  }
+  p{
+    color:white;
+    font-family:'Poppins', sans-serif;
+    font-weight:500;
+    line-height:1.8em;
+    font-size:0.6rem;
+
+  }
+
+  .intro{
+    padding-bottom:3em;
+    border-bottom:solid 2px white;
+    font-size:0.6rem;
+    font-family:'Poppins', sans-serif;
+    font-weight:500;
+  }
+@media (min-width:350px) {
+  table {
+    width:80%;
+  }
+  
+}
+
+@media (min-width:400px) {
+  nav a{
+    font-size:0.5rem;
+    width:60px;
+    padding-bottom:0.6em;
+  }
+  .logout-img{
+    min-width:10px;
+    max-width:32px;
+  }
+  h4{
+    font-size:2rem;
+  }
+  .net-worth{
+    font-size:1.4rem;
+  }
+  .balance{
+    font-size:1rem;
+  }
+  
+
+}
+@media (min-width:600px){
+  p{
+    font-size:0.9rem;
+  }
+  a.test{
+    font-size:0.8rem;
+
+  }
+  .intro{
+    font-size:0.8rem;
+
+  }
+  .account-info-one{
+    width:80%;
+    padding:2em 2em;
+  }
+  footer{
+    display: grid;
+    grid-auto-flow:column dense;
+  }
+  
+  .historyy-information-item-gain{
+    font-size:0.8rem;
+    
+  }
+
+}
+@media (min-width:768px) {
+  nav a{
+    font-size:0.8rem;
+    width:100px;
+  }
+  .logo{
+    min-width:100px;
+    max-width:200px;
+  }
+
+  
+}
+
+

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tutorials.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gajraj+One&family=Gloock&family=Inter:wght@100;200;300;900&family=Montserrat:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@400;500;900&family=Questrial&family=Roboto:ital,wght@0,900;1,700&family=Source+Serif+Pro:ital,wght@1,600&family=Urbanist:wght@800&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
+	<title>Comment créer un emploi du temps attrayant avec HTML5 & CSS3 | Frame Genesis</title>
+</head>
+<body>
+	<main>
+		<h1 class="tuto-title">Créer un emploi du temps attrayant avec HTML5 & CSS3</h1>
+		<section class="contain-all">
+			<section class="tuto">
+			<h1 class="sts-hds">1. Informations Générales</h1>
+			<div class="tut-line">
+				<div class="pre">
+					<h2 class="tut-head">Prerequis</h1>
+					<ul class="tut-pts">
+						<li>Savoir créer un document HTML5</li>
+						<li>Effectuer les contrôles de base avec CSS3</li>
+						<li>Connaître les propriétés basiques de CSS3</li>
+						<li>Savoir ajouter des marges à l' intérieur et à l' extérieur des éléments HTML</li>
+					</ul>
+				</div>
+				<div class="objec">
+					<h2 class="tut-head">Objectifs</h1>
+					<ul class="tut-pts">
+						<li>Savoir concevoir des tableaux avec HTML5</li>
+						<li>Comprendre les règles de base du graphisme appliquées au Web design</li>
+						<li>Savoir styler correctement un tableau avec CSS3</li>
+						<li>Savoir manipuler du texte avec CSS3</li>
+					</ul>
+				</div>
+				<div class="concepts">
+					<h2 class="tut-head">Concepts Fondamentaux</h1>
+					<ul class="tut-pts">
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQhNyA64H-AhXCnVwKHUVTC7sQFnoECAgQAQ&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FHTML%2FElement%2Ftable&usg=AOvVaw3HgULxusYFqr5awFnTM-8P" target="_blank">HTML5 | balise &lttable&gt</a></li>
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjng4Ci64H-AhWZ_rsIHeLvCmgQFnoECAwQAQ&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FHTML%2FElement%2Fthead&usg=AOvVaw0zjFk_UTEY89ugODLw8lav" target="_blank">HTML5 | balise &ltthead&gt</a></li>
+						<li><a href="https://www.google.com/url?sa=t&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj1u_yx64H-AhXdg_0HHXYCAhUQFnoECAoQAQ&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FHTML%2FElement%2Ftbody&usg=AOvVaw2SuxvsVeENPrMlAdZgWzuP" target="_blank">HTML5 | balise &lttbody&gt</a></li>
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjdyufU64H-AhVWh_0HHRvuBOAQFnoECA4QAQ&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FHTML%2FElement%2Fth&usg=AOvVaw15MGwnqNk6xLYrbO02lL_U" target="_blank">HTML5 | balise &ltth&gt</a></li>
+						<li><a href="https://www.google.com/url?sa=t&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjkxMbh64H-AhX157sIHXmmAPcQFnoECCQQAQ&url=https%3A%2F%2Fwww.oujood.com%2Fbalises%2Fbalise-td.php&usg=AOvVaw0Ys9HDIwKwhOleg6NpKCMm" target="_blank">HTML5 | balise &lttr&gt</a></li>
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwigvb2T7IH-AhUTTsAKHb71ApEQFnoECCgQAQ&url=https%3A%2F%2Ftutowebdesign.com%2Fbalise-td-html.php&usg=AOvVaw3K58gVOesxSMQW8t75tmWm" target="_blank">HTML5 | balise &lttd&gt</a></li>
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZkZu16oH-AhWXd8AKHVwUC3sQFnoECCMQAw&url=https%3A%2F%2Fwww.codeur.com%2Ftuto%2Fcss%2Fselecteurs-css%2F&usg=AOvVaw3W-F13Yr_lmKa103PKz06m" target="_blank">CSS3 | Les classes</a></li>
+						<li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-radius" target="_blank">CSS3 | border-radius</a></li>
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi5nLy57IH-AhWlUaQEHWQCDYEQFnoECAsQAw&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FCSS%2Ftext-align&usg=AOvVaw0u6y1BHg0DVQJ8BbtC4YBK" target="_blank">CSS3 | text-align</a></li>
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwicu_2Z6oH-AhUTilwKHTRwC-0QFnoECA4QAQ&url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FCSS%2Fborder-collapse&usg=AOvVaw1MIPaV6xkI_JPo97dcZVJk" target="_blank">CSS3 | border-collapse</a></li>
+
+					</ul>
+				</div>
+				<div class="concepts">
+					<h2 class="tut-head">Recommandations</h1>
+					<ul class="tut-pts">
+						<li>Unités de mesure: pourcentages(px) pour les dimensions, point(pt) pour la typographie</li>
+						<li>Dimensions: 100% pour tous les périphériques</li>
+						<li>Editeurs de texte: Sublime Text 3 ou VS Code</li>
+						<li>Navigateurs: Chrome <strong class="version">v84+</strong>, Mozilla Firefox <strong class="version">v63+</strong>, Microsoft Edge <strong class="version">v84+</strong></li>
+					</ul>
+				</div>
+			</div>
+			<section class="steps">
+				<h1 class="sts-hds">2. Etapes de conception</h1>
+				<div>
+					<figure class="steps-exp">
+						<figcaption class="steps-head">a) Décomposer le design</figcaption>
+						<img src="{{url_for('static', filename='/media/tuto11.png')}}" alt="" loading="lazy" class="illustration">
+						<p class="steps-exp-par">
+							Vous remarquerez que l' emploi du temps est subdivisé en <strong>deux (2) parties</strong> bien distinctes. Les <strong>entêtes</strong> où il y' a les <strong>dates et les horaires</strong> et le <strong>corps</strong> de l' emploi du temps où se trouvent les <strong>différentes matières</strong>. La compréhension de cette <strong>hiérarchie</strong> nous permet déja d' avoir une idée sur les <strong>éléments HTML5</strong>
+							en question.
+						</p>
+					</figure>
+				</div>
+				<div>
+					<figure class="steps-exp">
+						<figcaption class="steps-head">b) Mettre en place les balises HTML5</figcaption>
+						<code>
+							<pre>
+&lt!DOCTYPE html&gt
+	&lthtml lang="FR"&gt
+		&lthead&gt
+			&ltmeta charset="UTF-8"&gt
+			&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+			&ltlink rel="stylesheet" type="text/css" href="./emploi.css"&gt
+		&lt/head&gt
+		&ltbody&gt
+			&lth1&gtEmploi du temps scolaire&lt/h1&gt
+			&lttable&gt
+				&ltthead&gt&lt/thead&gt
+				&lttbody&gt&lt/tbody&gt
+			&lt/table&gt
+		&lt/body&gt
+	&lt/html&gt
+							</pre>	
+						</code>
+						<p class="steps-exp-par">
+							<ul class="tut-pts">
+								<li>
+									Commencez par mettre les balises HTML de base, dont entre autres la balise !DOCTYPE html qui est la balise la plus importante, c' est cette balise qui permet à votre navigateur de savoir qu' il s' agit d' un site web. A côté de cette balise vous ajouter la balise html qui est votre page elle même cette balise contiendra les éléments fondamentaux qui composent le site telles que les balises &lthead&gt et les balises &ltbody&gt
+								</li>
+								<li>
+									Ajouter la balise &lttable&gt qui contiendra votre emploi du temps. A l' intérieur de cette balise que vous venez de créer, ajouter deux balises. L' une va contenir les différentes entêtes du tableau
+									(&ltthead>&lt/thead&gt) et l' autre va contenir le corps du tableau (&lttbody&gt&lt/tbody&gt) qui représente dans notre contexte les matières.
+								</li>
+							</ul>
+						</p>
+					</figure>
+				</div>
+				<div>
+					<figure class="steps-exp">
+						<figcaption class="steps-head">c) Créer la première ligne de notre emploi du temps</figcaption>
+						<p class="steps-exp-par">
+							<ul class="tut-pts">
+								<li>
+									Créer votre balise &lttr&gt (table row) qui veut tout simplement dire ligne en Anglais. Pour la première ligne de notre emploi du temps on constate que les éléments possèdent un arrière plan de couleur bleu. Ou plus précisement bleu sombre(Darkblue), nous allons créer cinq (5) balises &ltth/&gt dans notre balise &lttr&gt pour contenir les cinq jours de la semaine sur la première ligne. 
+								</li>
+							</ul>
+							<code>
+							<pre>
+&lt!DOCTYPE html&gt
+	&lthtml lang="FR"&gt
+		&lthead&gt
+			&ltmeta charset="UTF-8"&gt
+			&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+			&ltlink rel="stylesheet" type="text/css" href="./emploi.css"&gt
+		&lt/head&gt
+		&ltbody&gt
+			&lth1&gtEmploi du temps scolaire&lt/h1&gt
+			&lttable&gt
+				&ltthead&gt
+					&lttr&gt
+						&ltth&gt&lt/th&gt
+						&ltth class="jours"&gtLundi&lt/th&gt
+						&ltth class="jours"&gtMardi&lt/th&gt
+						&ltth class="jours"&gtMercredi&lt/th&gt
+						&ltth class="jours"&gtJeudi&lt/th&gt
+						&ltth class="jours"&gtVendredi&lt/th&gt
+					&lt/tr&gt
+				&lt/thead&gt
+				&lttbody&gt&lt/tbody&gt
+			&lt/table&gt
+		&lt/body&gt
+	&lt/html&gt
+							</pre>	
+						</code>
+							<ul class="tut-pts">
+								<li>
+									Vous remarquerez la présence de l' attribut classe dans la balise &ltth&gt. Cet attribut nous permettra de cibler spécifiquement les jours afin de modifier l' arrière plan par défaut avec une autre couleur (bleu sombre). Pour plus d' infos sur les classes et leurs utiliter veuillez visiter cette <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZkZu16oH-AhWXd8AKHVwUC3sQFnoECCMQAw&url=https%3A%2F%2Fwww.codeur.com%2Ftuto%2Fcss%2Fselecteurs-css%2F&usg=AOvVaw3W-F13Yr_lmKa103PKz06m" class="usefool-links">page</a>.
+								</li>
+							</ul>
+							<code>
+							<pre class="css">
+.jours{
+	background-color:darkblue;
+	color:white;
+	}
+							</pre>	
+						</code>
+						</p>
+						<img src="{{url_for('static', filename='/media/tuto12.png')}}" alt="" loading="lazy" class="illustration">
+					</figure>
+				</div>
+				<div>
+					<figure class="steps-exp">
+						<figcaption class="steps-head">
+							<p class="steps-exp-par">
+								<ul class="tut-pts">
+									<li>
+										Notre emploi du temps n' est pas du tout terminé. Pour le compléter, nous ajoutons quatre (4) autres balises &lttr&gt, cette fois-ci, nous allons les ajouter dans la balise &lttbody&gt qui vont contenir les différentes lignes de notre tableau.
+									</li>
+								</ul>
+							<code>
+								<pre>
+&lt!DOCTYPE html&gt
+	&lthtml lang="FR"&gt
+		&lthead&gt
+			&ltmeta charset="UTF-8"&gt
+			&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+			&ltlink rel="stylesheet" type="text/css" href="./emploi.css"&gt
+		&lt/head&gt
+		&ltbody&gt
+			&lth1&gtEmploi du temps scolaire&lt/h1&gt
+			&lttable&gt
+				&ltthead&gt
+					&lttr&gt
+						&ltth&gt&lt/th&gt
+						&ltth class="jours"&gtLundi&lt/th&gt
+						&ltth class="jours"&gtMardi&lt/th&gt
+						&ltth class="jours"&gtMercredi&lt/th&gt
+						&ltth class="jours"&gtJeudi&lt/th&gt
+						&ltth class="jours"&gtVendredi&lt/th&gt
+					&lt/tr&gt
+				&lt/thead&gt
+				&lttbody&gt
+					&lttr&gt
+						&ltth&gt8h-10h&lt/th&gt
+						&lttd&gtMathématiques&lt/td&gt
+						&lttd&gtPhysique&lt/td&gt
+						&lttd&gtAnglais&lt/td&gt
+						&lttd&gtHistoire&lt/td&gt
+						&lttd&gtSVT&lt/td&gt
+					&lt/tr&gt
+					&lttr&gt
+						&ltth&gt10h-12h&lt/th&gt
+						&lttd&gtFrançais&lt/td&gt
+						&lttd&gtEPS&lt/td&gt
+						&lttd&gtMathématiques&lt/td&gt
+						&lttd&gtAnglais&lt/td&gt
+						&lttd&gtPhysique&lt/td&gt
+					&lt/tr&gt
+					&lttr&gt
+						&ltth&gt14h-16h&lt/th&gt
+						&lttd&gtHistoire&lt/td&gt
+						&lttd&gtSVT&lt/td&gt
+						&lttd&gtFrançais&lt/td&gt
+						&lttd&gtEPS&lt/td&gt
+						&lttd&gtMathématiques&lt/td&gt
+					&lt/tr&gt
+					&lttr&gt
+						&ltth&gt16h-18h&lt/th&gt
+						&lttd&gtAnglais&lt/td&gt
+						&lttd&gtHistoire&lt/td&gt
+						&lttd&gtPhysique&lt/td&gt
+						&lttd&gtFrançais&lt/td&gt
+						&lttd&gtEPS&lt/td&gt
+					&lt/tr&gt
+				&lt/tbody&gt
+			&lt/table&gt
+		&lt/body&gt
+	&lt/html&gt
+								</pre>	
+							</code>
+						</p>
+						</figcaption>
+						<img src="{{url_for('static', filename='/media/tuto13.png')}}" alt="" loading="lazy" class="illustration">
+					</figure>
+				</div>
+				<div>
+					<figure class="steps-exp">
+						<figcaption class="steps-head">d) Styler notre emploi de temps avec CSS3</figcaption>
+						<p class="steps-exp-par">
+							Notre Stylesheet est très simple si vous aviez bien suivi les cours précédents. Les seules nouveautés sont:
+							<ul class="tut-pts">
+								<li>la propriété CSS border-collapse avec la valeur collapse: Ici elle permet de relier les différentes cellules du tableau et permet de les séparer, lorsque la valeur est réglée à collapse</li>
+								<li>la propriété font-family avec la valeur sans-serif: Il s' agit de la police</li>
+								<li>la propriété text-align avec la valeur center: Elle permet d' aligner le texte contenu dans le tableau au centre</li>
+							</ul>	
+						</p>
+						<code>
+							<pre class="css">
+*{
+	box-sizing:border-box;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	font-family:sans-serif;
+	margin:50px auto;
+}
+h1{
+	font-family:sans-serif;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: center;
+}
+th {
+	background-color: #f2f2f2;
+}
+.jours{
+	background-color:darkblue;
+	color:white;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tbody th {
+	background-color: #f2f2f2;
+}
+
+tbody th:first-child, thead th:first-child {
+	background-color: white;
+	border: none;
+}
+
+							</pre>	
+						</code>
+						<img src="{{url_for('static', filename='/media/tuto14.png')}}" alt="" loading="lazy" class="illustration">
+					</figure>
+				</div>
+				<div class="objec">
+					<h2 class="tut-head">Allez plus loin</h1>
+					<ul class="tut-pts">
+						<li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjj6OTx7IH-AhWOR8AKHZ1SAzsQFnoECA4QAw&url=http%3A%2F%2Fstylescss.free.fr%2Fv2-properties%2Fgrid.php&usg=AOvVaw2Lt0UFCGSj7fG5Kc-dRbag" target="_blank">CSS Grids</a></li>
+					</ul>
+				</div>
+			</section>
+			<img src="{{url_for('static', filename='/media/further.png')}}" loading="lazy" class="ls-img">	
+		</section>
+	</section>
+	{% include 'copy.html' %}
+	</main>
+</body>
+</html>

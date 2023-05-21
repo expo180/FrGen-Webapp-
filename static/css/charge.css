@@ -1,0 +1,119 @@
+:root{
+		--first-color1:#281259; /*main background color*/
+		--first-color2:#341773; /*secondary color*/
+		--second-color1:#6B71F2;
+		--btn-txtcolor1:white;
+		--btn-bgcolor1:#5433FF;
+		--btn-bgcolor2:#20BDFF;
+		--call-to1:#EC008C;
+		--btn-color1:deeppink;
+		--call-to2:#FC6767;
+		--third-color1:#E2BD00;
+		--third-color2:#FFE610;
+}
+
+body {
+	background-color:var(--first-color1);
+}
+
+.container {
+	margin:80px auto;
+	max-width: 500px;
+	padding:3em 3em;
+	background:linear-gradient(var(--first-color1), var(--first-color2));
+	box-shadow: 2px 0px 20px black;
+}
+
+h1, h2 {
+	color:white;
+	font-size:0.7rem;
+	text-align:center;
+	font-weight:500;
+}
+form {
+	display: grid;
+	grid-gap: 1em;
+}
+.question-one{
+	display:flex;
+	flex-direction:column;
+	gap:1em;
+	color:white;
+	font-family:'Poppins', sans-serif;
+	font-weight:500;
+}
+.carte{
+	display:flex;
+	gap:1em;
+	margin-bottom:1.2em;
+	justify-content:center;
+	align-items:center;
+}
+
+label {
+	display: block;
+	font-size:0.5rem;
+	font-family:'Poppins', sans-serif;
+	font-weight:500;
+	margin-bottom:1em;
+	color:white;
+}
+.yes{
+	font-size:0.7rem;
+
+}
+select{
+	text-align:center;
+}
+input[type="text"],
+select {
+	padding:0.8em 0.5em;
+	margin-bottom:1em;
+	border: 1px solid #ccc;
+	background-color:var(--first-color1);
+	color:white;
+	font-size:0.5rem;
+	width: 100%;
+	outline:none;
+	font-family:'Poppins', sans-serif;
+	font-weight:500;
+}
+input[type="text"]:focus{
+	background-color:white;
+	color:var(--first-color1);
+	box-shadow:1px 0px 20px black;
+}
+
+input[type="submit"] {
+	background:linear-gradient(var(--call-to1), var(--btn-color1));
+	color: #fff;
+	border:solid 2px white;
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+	opacity:90%;
+	display:block;
+	margin:2em auto;
+}
+
+input[type="submit"]:hover {
+	background-color: #005daa;
+	opacity:100%;
+}
+@media(min-width:768px){
+	input[type="text"], select{
+		padding:1em 1em;
+		font-size:0.8rem;
+	}
+	.yes{
+		font-size:1.1rem;
+	}
+	h1, h2{
+		font-size:2rem;
+	}
+	label{
+		font-size:1.1rem;
+	}
+}

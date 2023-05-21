@@ -1,0 +1,60 @@
+:root{
+		--first-color1:#281259; /*main background color*/
+		--first-color2:#341773; /*secondary color*/
+		--second-color1:#6B71F2;
+		--btn-txtcolor1:white;
+		--btn-bgcolor1:#5433FF;
+		--btn-bgcolor2:#20BDFF;
+		--call-to1:#EC008C;
+		--call-to2:#FC6767;
+		--third-color1:#E2BD00;
+		--third-color2:#FFE610;
+
+	}
+body {
+	font-family: Arial, sans-serif;
+	background-color:var(--first-color1);
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+main {
+	margin: 20px;
+}
+
+h1, h2 {
+	margin-top: 0;
+	color:white;
+}
+
+form {
+	margin-top: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type="text"] {
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	width: 200px;
+}
+
+button[type="submit"] {
+	padding: 5px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
