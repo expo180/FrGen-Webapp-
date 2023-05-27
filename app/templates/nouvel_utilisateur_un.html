@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/nouvel_utilisateur.css')}}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='script/validations.js')}}"></script>
+	<title>Créer un nouveau compte - frame genesis</title>
+</head>
+<body>
+	<form action="" method="POST">
+		<img src="{{url_for('static', filename='media/jupiter.png')}}" alt="" class="jupiter">
+		<div class="input-elements">
+			<h1>Créer un nouveau compte</h1>
+			{% block content %}
+				<div class="container">
+					{% for message in get_flashed_messages() %}
+						{{ message }}
+					{% endfor %}
+					{% block page_content %}{% endblock %}
+				</div>
+			{% endblock %}
+			{{form.hidden_tag()}}
+			{{form.last_name.label}} {{form.last_name(placeholder="Vignelli Massimo")}}
+			{{form.first_name.label}} {{form.first_name(placeholder="Max")}}
+			{{form.email.label}} {{form.email(placeholder="exemple@gmail.com")}}
+			<div class="next-buttons">
+				<button id="next">Suivant</button>
+			</div>
+			<footer>
+				<div>Vous avez déja un compte? Connectez-vous <a href="{{url_for('auth.connexion')}}" class="new-acc">ici</a></div>
+				<div class="copyright">&copy frame genesis 2023 | Tous droits réservés</div>
+			</footer>
+		</div>
+		<div class="account-creation">
+			<h1>Créer un nouveau compte</h1>
+			{{form.password.label}} {{form.password}}
+			{{form.password_confirm.label}} {{form.password_confirm}}
+			<label class="new-user center"><input type="checkbox" id="check" required> Vous aviez lu et accepté nos <a href="" class="new-acc">termes et conditions</a></label>
+			<div class="next-buttons">
+				{{form.register()}}
+				<button id="prev">Précédant</button>
+			</div>
+			<div class="error-msg">
+				<ul>
+					<li id="err1">Un mot de passe doit contenir au moins (8) caractères</li>
+					<li id="err2">Un mot de passe solide doit contenir au moins (1) chiffre</li>
+					<li id="err3">Un mot de passe solide doit contenir au moins (1) caractère spécial</li>
+					<li id="err4">Les deux (2) mots de passe doivent correspondre</li>
+				</ul>
+			</div>
+			<footer>
+				<div>Vous avez déja un compte? Connectez-vous <a href="{{url_for('auth.connexion')}}" class="new-acc">ici</a></div>
+				<div class="copyright">&copy frame genesis 2023 | Tous droits réservés</div>
+			</footer>
+		</div>
+		<img src="{{url_for('static', filename='media/jupiter.png')}}" alt="" class="jupiter">
+	</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenue {{username}}! - frame genesis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/utilisateur.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
+  </head>
+  <body>
+    {% include 'header_util.html' %}
+    <main>
+        <section class="profil-hidden">
+            <div class="profil-account-detail">
+      
+            </div>
+            <div class="profil-datasheet-detail">
+              <table>
+                <tr class="even">
+                     <th>IQ</th>
+                     <th>EQ</th>
+                     <th>Hard Skills</th>
+                     <th>Pourcentage</th>
+                </tr>
+                <tr class="light">
+                     <td>E.E. Cummings</td>
+                     <td>Tulips & Chimneys</td>
+                     <td class="money">$2,000.00</td>
+                     <td class="money">$2,642.50</td>
+                </tr>
+                <tr class="even">
+                     <td>Charles d'Orleans</td>
+                     <td>Poemes</td>
+                     <td class="money"></td>
+                     <td class="money">$5,866.00</td>
+                </tr>
+                <tr class="light">
+                     <td>T.S. Eliot</td>
+                     <td>Poems 1909 - 1925</td>
+                     <td class="money">$1,250.00</td>
+                     <td class="money">$8,499.35</td>
+                </tr>
+                <tr class="even">
+                     <td>Sylvia Plath</td>
+                     <td>The Colossus</td>
+                     <td class="money"></td>
+                     <td class="money">$1031.72</td>
+                </tr>
+                </table>
+            </div>
+            <div class="profil-IQ-details"></div>
+            <div class="profil-EQ-details"></div>
+            <div class="profil-EQ-details"></div>
+          </section>
+    </main>
+    {% include 'footer.util.html' %}
+  </body>
+</html>

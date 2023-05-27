@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenue {{username}}! - frame genesis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/utilisateur.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
+  </head>
+  <body>
+    {% include 'header_util.html' %}
+    <main>
+      <section id="welcome">
+        <h2>Bienvenue, {{username}}!</h2>
+        <p class="intro">
+          Vous êtes ici sur votre page d'accueil utilisateur, vous pouvez suivre votre 
+          <strong> progression sur cette page</strong>, <strong>recupérer vos attestations</strong>, 
+          <strong>emprunter de l'argent</strong> grâce à nos services de <strong>E-Banking.</strong>
+          Nous vous <strong>proposons</strong> également des <strong>tests de QI</strong> certifiés <strong>(WAIS -IV)</strong>
+          pour adultes et enfants afin de vous permettre de <strong>dompter votre génie si vous en êtes un!</strong>
+        </p>
+      </section>
+      <section id="profil" class="fade-in">
+        <div>
+          <img src="{{url_for('static', filename='media/profil.png')}}" alt="" class="description">
+          <h2>Profil</h2>
+          <p>
+           Cette section, vous permet de <strong>visualiser le récapitualif de tous vos scores</strong>, c' est un 
+           outil <strong>intéressant</strong> qui peut vous donner <strong>un aperçu</strong> sur toutes vos <strong>compétences sociales</strong>, 
+           vos <strong>hard skills</strong> et les <strong>compétences à développer.</strong>
+          </p>
+          <a href="" class="test">Ouvrir <img src="{{url_for('static', filename='media/open_in_popup.svg')}}" alt="" class="open"></a>
+        </div>
+      </section>
+      <section id="courses" class="fade-in">
+        <div>
+          <img src="{{url_for('static', filename='media/cours.png')}}" alt="" class="description">
+          <h2>Mes cours</h2>
+          <p>
+           Ici, vous pouvez suivre <strong>tous les cours que vous aviez acheté</strong> tout en sauvegardant votre 
+           progression.  Vous pouvez par conséquent prendre <strong>des pauses</strong>, lorsque vous suivez un cours et continuer
+           une fois que vous êtes libres en satisfaisant <strong>certaines conditions</strong>.
+          </p>
+          <a href="" class="test">Ouvrir <img src="{{url_for('static', filename='media/open_in_popup.svg')}}" alt="" class="open"></a>
+        </div>
+      </section>
+      <section id="bilan" class="fade-in">
+        <div>
+          <img src="{{url_for('static', filename='media/psychology.png')}}" alt="" class="description">
+          <h2>Bilan Psychologique</h2>
+          <p>
+            Ici, vous pouvez évaluer votre <strong>quotient intellectuel</strong>, 
+            votre <strong>quotient émotionnel</strong>, et vous pouvez également passer d'autres 
+            tests afin de mieux vous connaître. Veuillez lire <a href="" class="use">ce document</a> 
+            pour en savoir plus sur <strong>les tests et leurs importances</strong>.
+          </p>
+          <a href="" class="test">Ouvrir <img src="{{url_for('static', filename='media/open_in_popup.svg')}}" alt="" class="open"></a>
+        </div>
+      </section>
+      <section id="certifications" class="fade-in">
+        <div>
+          <img src="{{url_for('static', filename='media/certificate.png')}}" alt="" class="description">
+          <h2>Certifications</h2>
+          <p>Afin de récupérer vos certifications, vous devriez passer certains tests
+            différents tests avec un <strong>score d'au moins 65%</strong>, dans toutes les épreuves.
+          </p>
+          <a href="" class="test">Ouvrir <img src="{{url_for('static', filename='media/open_in_popup.svg')}}" alt="" class="open"></a>
+        </div>
+      </section>
+      <section id="online" class="fade-in">
+        <div>
+          <img src="{{url_for('static', filename='media/banking.png')}}" alt="" class="description">
+          <h2>Banque virtuelle</h2>
+          <p>Vous pouvez désormais emprunter de <strong>l' argent</strong> pour 
+            <strong>payer vos études et rembourser quand vous seriez prêts, 
+            vous pouvez également acheter les produits de notre boutique et rembourser plus tard</strong>. 
+            Pour plus d' infos, consulter <a href="" class="use">ce document PDF</a>
+          </p>
+          <a href="" class="test">Ouvrir <img src="{{url_for('static', filename='media/open_in_popup.svg')}}" alt="" class="open"></a>
+        </div>
+      </section>
+      <section id="strategy-games" class="fade-in">
+        <div>
+           <img src="{{url_for('static', filename='media/chess.png')}}" alt="" class="description">
+           <h2>Jeux de stratégie</h2>
+           <p>
+              En tant que programmeur, vous avez besoin <strong>d'aiguiser vos capacités anlytiques</strong>, 
+              cela vous permettra de prendre des <strong>décisions éclairées</strong> très <strong>vite</strong> et de savoir 
+              <strong>réfléchir correctement</strong> lorsque vous êtes <strong>sous pression</strong>. Ces  <strong>aptitudes</strong> seront 
+              <strong>essentielles</strong> tout au long de votre <strong>carrière</strong> quelque soit le domaine dans lequel vous travaillerez. 
+           </p>
+           <a href="" class="test">Ouvrir <img src="{{url_for('static', filename='media/open_in_popup.svg')}}" alt="" class="open"></a> 
+        </div>
+      </section>
+    </main>
+    {% include 'footer.util.html' %}
+  </body>
+</html>

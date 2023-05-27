@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ekki finance - accueil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/utilisateur.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
+  </head>
+  <body>
+    {% include 'header_util.html' %}
+    <main>
+        <section class="bank-hidden">
+            <div class="bank-last-line">
+              <div class="inline">
+                <img src="{{url_for('static', filename='media/user.svg')}}" alt="" class="account-icon">
+                <div class="account-details">
+                  <div class="account-owner">Nom:<strong>{{username}}</strong></div>
+                  <div class="account-id">ID compte:<strong>AAA-123-459</strong></div>
+                </div>
+              </div>
+              <a href=""><img src="{{url_for('static', filename='media/settings.png')}}" alt="" class="sets"></a>
+            </div>
+            <div class="bank-first-line">
+              <div class="account-info-one">
+                <div class="balance">Solde</div>
+                <div class="net-worth">$ 50,234.00</div>
+              </div>
+            </div>
+            <div class="banking-op">
+              <img src="{{url_for('static', filename='media/email_send.svg')}}" alt="" class="bank-icons">
+              <img src="{{url_for('static', filename='media/money_bag_bitcoin.svg')}}" alt="" class="bank-icons">
+              <img src="{{url_for('static', filename='media/link.svg')}}" alt="" class="bank-icons">
+              <img src="{{url_for('static', filename='media/debt.svg')}}" alt="" class="bank-icons">
+            </div>
+            <div class="bank-last-line">
+              <div class="history">
+                <div class="history-icons">
+                  <img src="{{url_for('static', filename='media/triangle.svg')}}" alt="" class="his-i" alt="">
+                  <img src="{{url_for('static', filename='media/triangle(1).svg')}}" alt="" class="his-i" alt="">
+                </div>
+                <div class="history-information">
+                  <div class="historyy-information-item-gain">Taslim <strong>$200</strong> bourses <strong class="gain">$1500</strong></div>
+                  <div class="historyy-information-item-gain">emprunt <strong>$25000</strong> Adnane <strong>$15</strong></div>
+                
+                </div>
+              </div>
+              <div class="analytics">
+                <img src="{{url_for('static', filename='media/web_analytics.svg')}}" alt="" class="sets" id="analytics-icon">
+              </div>
+            </div>
+           <table class="analytics-table">
+              <thead>
+                <tr class="even">
+                  <th>Instrument</th>
+                  <th>Position</th>
+                  <th>Plus-value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="light">
+                  <td>EUR/USD</td>
+                  <td>0.01 lot</td>
+                  <td>+10.00 EUR</td>
+                </tr>
+                <tr class="even">
+                  <td>GBP/USD</td>
+                  <td>-0.05 lot</td>
+                  <td>-25.00 GBP</td>
+                </tr>
+                <tr class="light">
+                  <td>USD/JPY</td>
+                  <td>0.02 lot</td>
+                  <td>+2000.00 JPY</td>
+                </tr>
+                <tr class="even">
+                  <td>USD/CHF</td>
+                  <td>-0.03 lot</td>
+                  <td>-30.00 C HF</td>
+                </tr>
+                <tr class="light">
+                  <td>AUD/USD</td>
+                  <td>0.1 lot</td>
+                  <td>+100.00 AUD</td>
+                </tr>
+                <tr class="even">
+                  <td>USD/CAD</td>
+                  <td>-0.2 lot</td>
+                  <td>-200.00 CAD</td>
+                </tr>
+                <tr class="light">
+                  <td>NZD/USD</td>
+                  <td>0.03 lot</td>
+                  <td>+30.00 NZD</td>
+                </tr>
+                <tr class="even">
+                  <td>EUR/GBP</td>
+                  <td>0.05 lot</td>
+                  <td>-15.00 EUR</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+    </main>
+    {% include 'footer.util.html' %}
+  </body>
+</html>
