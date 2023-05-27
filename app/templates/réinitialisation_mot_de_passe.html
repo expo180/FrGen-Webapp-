@@ -9,24 +9,32 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
-	<title>Connexion - frame genesis</title>
+	<title>Réinitialisation Mot de Passe - frame genesis</title>
 </head>
 <body>
 	<form action="" method="POST" class="from">
-		<div class="img-firs"><h1>Se connecter</h1></div>
+		<div class="img-firs"><h1>Réinitialisation Mot de Passe</h1></div>
 		{% for message in get_flashed_messages() %}
 			<div class="container">
 				{{ message }}
 			</div>
 		{% endfor %}
 			{{form.hidden_tag()}}
-			{{form.email.label}} {{form.email(placeholder="exemple@gmail.com")}}
-			{{form.password.label}} {{form.password(placeholder="Mot de passe")}}
-			<div class="remember-me"><div>{{form.remember_me}} </div><div>{{form.remember_me.label}}</div></div>
-		<div>{{form.submit()}}</div>
+			{{form.new_password.label}} {{form.new_password}}
+			{{form.new_password_confirm.label}} {{form.new_password_confirm}}
+			<br />
+		<div>{{form.reset()}}</div>
+		<br />
+		<div class="error-msg">
+			<ul>
+				<li id="err1">Un mot de passe doit contenir au moins (8) caractères</li>
+				<li id="err2">Un mot de passe solide doit contenir au moins (1) chiffre</li>
+				<li id="err3">Un mot de passe solide doit contenir au moins (1) caractère spécial</li>
+				<li id="err4">Les deux (2) mots de passe doivent correspondre</li>
+			</ul>
+		</div>
 		<div class="last-line">
 			<div class="new-user">Nouvel utilisateur ? Créer votre compte <a href="{{url_for('auth.nouvel_utilisateur')}}" class="new-acc">ici</a></div>
-			<div class="new-user">Mot de passe oublié ? Veuillez le réinitialiser <a href="{{url_for('auth.reset_password')}}" class="new-acc">ici</a></div>
 			<div class="copyright">&copy frame genesis 2023 | Tous droits réservés</div>
 		</div>
 	</form>

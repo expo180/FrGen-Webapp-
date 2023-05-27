@@ -9,11 +9,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="{{url_for('static',filename='script/animations.js')}}"></script>
-	<title>Connexion - frame genesis</title>
+	<title>RRéinitialisation Mot de Passe - frame genesis</title>
 </head>
 <body>
 	<form action="" method="POST" class="from">
-		<div class="img-firs"><h1>Se connecter</h1></div>
+		<div class="img-firs"><h1>Réinitialisation Mot de Passe</h1></div>
+		<br />
 		{% for message in get_flashed_messages() %}
 			<div class="container">
 				{{ message }}
@@ -21,13 +22,13 @@
 		{% endfor %}
 			{{form.hidden_tag()}}
 			{{form.email.label}} {{form.email(placeholder="exemple@gmail.com")}}
-			{{form.password.label}} {{form.password(placeholder="Mot de passe")}}
-			<div class="remember-me"><div>{{form.remember_me}} </div><div>{{form.remember_me.label}}</div></div>
-		<div>{{form.submit()}}</div>
+			<br />
+			<div>{{form.submit()}}</div>
+			<br />
 		<div class="last-line">
 			<div class="new-user">Nouvel utilisateur ? Créer votre compte <a href="{{url_for('auth.nouvel_utilisateur')}}" class="new-acc">ici</a></div>
-			<div class="new-user">Mot de passe oublié ? Veuillez le réinitialiser <a href="{{url_for('auth.reset_password')}}" class="new-acc">ici</a></div>
 			<div class="copyright">&copy frame genesis 2023 | Tous droits réservés</div>
+			<br />
 		</div>
 	</form>
 </body>

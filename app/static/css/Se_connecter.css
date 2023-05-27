@@ -185,6 +185,7 @@
 	input[type="submit"]:hover{
 		background:white;
 		color:deeppink;
+		cursor:pointer;
 
 	}
 	.correct{

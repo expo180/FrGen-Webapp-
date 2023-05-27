@@ -24,6 +24,7 @@ class User(UserMixin, db.Model):
 class Bank(UserMixin, db.Model):
     __tablename__ = 'bank'
     id = db.Column(db.Integer, primary_key=True)
+    account_id = db.Column(db.String(64), unique=True)
     loans = db.Column(db.Float, index=True, default=0)
     net_worth = db.Column(db.Float(15,9), index=True, default=0)
     money = db.relationship('User', backref='bank_net')

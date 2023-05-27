@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 from . import db
-
+from .forms import LoginForm
+from flask_login import login_required, current_user
 
 main = Blueprint('main', __name__)
 
@@ -11,7 +12,7 @@ def home():
 
 @main.route("/cours/")
 def courses():
-    return render_template('computer_science.html')
+    return render_template('popular_courses.html')
 
 
 @main.route("/Développement_web/")
@@ -157,6 +158,42 @@ def logarithmic_functions():
 def psy():
     return render_template('bilan_psy.html')
 
-@main.route("/Page_d'acceuil/")
+@main.route("/page_d'acceuil_utilisateur/")
+@login_required
 def dashboard():
-   return render_template('utilisateur.html') 
+   return render_template('utilisateur_accueil.html', username=current_user.first_name)
+
+
+@main.route("/profil_psychologique/")
+@login_required
+def statistics():
+   return render_template('profil.html', username=current_user.first_name)
+
+@main.route("/mes_cours/")
+@login_required
+def mes_cours():
+   return render_template('mes_cours.html', username=current_user.first_name)
+
+@main.route("/tests_psychologiques/")
+@login_required
+def psycho():
+   return render_template('psycho_tests.html', username=current_user.first_name)
+
+@main.route("/banque_virtuelle/")
+@login_required
+def bank():
+   return render_template('ekki_finance.html', owns=current_user.bank_net, username=current_user.first_name, account_id=current_user.account_id)
+
+
+@main.route("/certifications/")
+@login_required
+def certifications():
+   return render_template('certifications.html', username=current_user.first_name)
+
+
+@main.route("/jeux_de_stratégies/")
+@login_required
+def games():
+   return render_template("Neurogames.html")
+
+

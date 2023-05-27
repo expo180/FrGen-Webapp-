@@ -28,20 +28,7 @@
   .flags:hover{
     border:solid 1px white;
   }
-  .account-details{
-    display: flex;
-    flex-direction: column;
-    gap:0.2em;
-    margin-top:0.5em;
-  }
-  .account-icon{
-    width:100%;
-    max-width:30px;
-    border:solid 2px white;
-    padding:0.2em 0.2em;
-    border-radius:20px;
-
-  }
+  
   .flags-col{
     display:flex;
     flex-direction:row;
@@ -49,94 +36,7 @@
     justify-content: center;
     align-items:center;
   }
-  .history-information{
-    display: flex;
-    flex-direction:column;
-    gap:0.2em;
-  }
-  .his-i{
-    width:100%;
-    max-width:18px;
-  }
-  .analytics-table{
-    display: none;
-  }
-  #analytics-icon{
-    cursor:pointer;
-  }
-  .account-owner, .account-id{
-    color:white;
-    font-family:'Poppins', sans-serif;
-    font-size:0.5rem;
-    display: flex;
-    flex-direction:row;
-    gap:0.5em;
-  }
-  .history{
-    display: flex;
-    flex-direction: column;
 
-  }
-  .historyy-information-item-gain{
-    display: flex;
-    flex-direction:row;
-    font-family:'Poppins', sans-serif;
-    font-size:0.5rem;
-    font-weight:500;
-    color:white;
-
-  }
-  table {
-    width:50%;
-    margin:5em auto;
-    font-family:'Poppins', sans-serif;
-    font-weight:500;
-  }
-  th{
-    padding: 7px 10px 10px 10px;
-    font-family:'Poppins', sans-serif;
-    font-weight:700;
-    font-size:0.6rem;
-    
-  }
-  tr.light{
-    background:white;
-    color:var(--btn-bgcolor1);
-  }
-  td{
-    padding: 7px 10px 10px 10px;
-    font-family:'Poppins', sans-serif;
-    font-weight:700;
-    font-size:0.6rem;
-
-  }
-  th {
-    letter-spacing: 0.1em;
-    font-size:0.6rem;
-    border-bottom: 2px solid var(--btn-bgcolor2);
-    border-top: 4px solid white;
-  
-    text-align: left;
-  }
-    tr.even {
-    background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
-    color:white;
-  }
-    tr:hover {
-    background:var(--btn-bgcolor3);
-    color:var(--btn-bgcolor1);
-    }
-
-  .history-icons{
-    display:flex;
-    flex-direction:row;
-    gap:0.5em;
-  }
-  .inline{
-    display:grid;
-    grid-template-columns:30px 200px;
-    gap:1.3em;
-  }
   .footer-links{
     display: flex;
     flex-direction:column;
@@ -192,40 +92,6 @@
     margin:5em 0;
     gap:2em;
     cursor:pointer;
-  }
-  .bank-icons{
-    width:100%;
-    max-width:40px;
-    background:linear-gradient(var(--btn-bgcolor1), var(--btn-bgcolor2));
-    padding:0.5em 0.5em;
-    border-radius:40px;
-    border:solid 2px white;
-    opacity:93.5%;
-  }
-  .bank-icons:hover{
-    opacity:100%;
-    box-shadow:1px 0px 20px black;
-    transform: translateY(-0.6em);
-    background: cyan;
-  }
-  .account-info-one{
-    font-family:'Poppins', sans-serif;
-    background:linear-gradient(90deg,var(--btn-bgcolor1)70%, var(--btn-bgcolor2));
-    padding:1em 2em;
-    color:white;
-    width:70%;
-    border-bottom-right-radius:20px;
-    border-bottom-left-radius:20px;
-    border-top:14px solid white;
-    box-shadow:1px 0px 20px #000;
-    margin-top:2em;
-
-
-  }
-  .bank-last-line{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
   }
   .sets{
     width:32px;

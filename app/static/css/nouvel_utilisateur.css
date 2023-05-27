@@ -6,7 +6,7 @@
 }
 
 @media (min-width:298px) {
-    :root{
+  :root{
 		--first-color1:#281259; /*main background color*/
 		--first-color2:#341773; /*secondary color*/
 		--second-color1:#6B71F2;
@@ -18,7 +18,7 @@
 		--third-color1:#E2BD00;
 		--third-color2:#FFE610;
 
-	}
+}
 
     .error-msg{
         color:var(--call-to2);
@@ -135,6 +135,10 @@
         color:var(--call-to1);
 
     }
+    input[type="submit"]:hover{
+    	color:var(--first-color1);
+	background:white;
+    }
     p{
         color:white;
     }
@@ -145,10 +149,22 @@
         background:none;
     }
     
+    .container{
+        font-family:'Poppins', sans-serif;
+        font-size:0.5rem;
+        color:white;
+	align-items:center;
+	margin:1em auto;
+	text-align: center;
+	background-color:var(--btn-bgcolor1);
+	border:solid 2px var(--btn-bgcolor2);
+	padding:1em 1em;
+	border-bottom-right-radius:10px;
+	border-top-left-radius:5px;
 
-
-
+    }
 }
+
 @media (min-width:400px){
     .form{
         max-width:600px;
@@ -166,8 +182,9 @@
     h1{
         font-size:1.6rem;
     }
-    
-
+    .container{
+    	font-size:0.87rem;
+    }
     
 }
 @media (min-width:1440px){

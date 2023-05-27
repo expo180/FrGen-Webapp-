@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ekki finance - accueil</title>
+    <title>Banque virtuelle - frame genesis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/utilisateur.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/ekki.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap" rel="stylesheet">
@@ -14,13 +14,13 @@
   <body>
     {% include 'header_util.html' %}
     <main>
-        <section class="bank-hidden">
+        <section class="bank">
             <div class="bank-last-line">
               <div class="inline">
                 <img src="{{url_for('static', filename='media/user.svg')}}" alt="" class="account-icon">
                 <div class="account-details">
                   <div class="account-owner">Nom:<strong>{{username}}</strong></div>
-                  <div class="account-id">ID compte:<strong>AAA-123-459</strong></div>
+                  <div class="account-id">ID compte:<strong>{{account_id}}</strong></div>
                 </div>
               </div>
               <a href=""><img src="{{url_for('static', filename='media/settings.png')}}" alt="" class="sets"></a>
@@ -28,7 +28,7 @@
             <div class="bank-first-line">
               <div class="account-info-one">
                 <div class="balance">Solde</div>
-                <div class="net-worth">$ 50,234.00</div>
+                <div class="net-worth"></div>
               </div>
             </div>
             <div class="banking-op">
@@ -44,8 +44,8 @@
                   <img src="{{url_for('static', filename='media/triangle(1).svg')}}" alt="" class="his-i" alt="">
                 </div>
                 <div class="history-information">
-                  <div class="historyy-information-item-gain">Taslim <strong>$200</strong> bourses <strong class="gain">$1500</strong></div>
-                  <div class="historyy-information-item-gain">emprunt <strong>$25000</strong> Adnane <strong>$15</strong></div>
+                  <div class="historyy-information-item-gain"> <strong>$200</strong> bourses <strong class="gain">$1500</strong></div>
+                  <div class="historyy-information-item-gain">emprunt <strong>$25000</strong>  <strong>$15</strong></div>
                 
                 </div>
               </div>
@@ -106,6 +106,6 @@
             </table>
           </section>
     </main>
-    {% include 'footer.util.html' %}
+    {% include 'footer_util.html' %}
   </body>
 </html>

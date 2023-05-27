@@ -16,14 +16,11 @@
 		<img src="{{url_for('static', filename='media/jupiter.png')}}" alt="" class="jupiter">
 		<div class="input-elements">
 			<h1>Créer un nouveau compte</h1>
-			{% block content %}
+			{% for message in get_flashed_messages() %}
 				<div class="container">
-					{% for message in get_flashed_messages() %}
-						{{ message }}
-					{% endfor %}
-					{% block page_content %}{% endblock %}
+					{{ message }}
 				</div>
-			{% endblock %}
+			{% endfor %}
 			{{form.hidden_tag()}}
 			{{form.last_name.label}} {{form.last_name(placeholder="Vignelli Massimo")}}
 			{{form.first_name.label}} {{form.first_name(placeholder="Max")}}
