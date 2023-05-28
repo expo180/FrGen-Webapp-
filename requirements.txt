@@ -32,4 +32,4 @@ Werkzeug
 WTForms
 pymysql
 email_validator
-Flask-MySQLdb
+pymysql
