@@ -9,7 +9,7 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     # Configure the database URI with the SSL certificate path
-    connection = MySQLdb.connect(
+    db.connect(
     host= os.getenv("HOST"),
     user=os.getenv("USERNAME"),
     passwd= os.getenv("PASSWORD"),
