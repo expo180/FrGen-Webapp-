@@ -15,8 +15,7 @@ def create_app():
         username=os.environ.get('USERNAME'),
         password=os.environ.get('PASSWORD'),
         database=os.environ.get('DATABASE'),
-        ssl_ca=os.getenv("SSL_CERT")
-     )
+    )
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Frame_genesis_entreprises74418917$*!'
@@ -40,5 +39,10 @@ def create_app():
     # blueprint for non-auth parts of app
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
+
+    # SSL configuration
+    app.config['SQLALCHEMY_DATABASE_URI'] += "?ssl_mode=VERIFY_IDENTITY&ssl={ca}".format(
+        ca=os.environ.get("SSL_CERT")
+    )
 
     return app
