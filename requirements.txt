@@ -33,3 +33,4 @@ WTForms
 pymysql
 email_validator
 flask-change-password
+mysql-connector-python

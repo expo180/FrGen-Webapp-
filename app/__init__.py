@@ -2,7 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 import os
-import pymysql.cursors
 
 # Initialize SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
@@ -10,17 +9,16 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     # Configure the database URI with the SSL certificate path
-    connection = pymysql.connect(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{username}:{password}@{host}/{database}'.format(
         host=os.getenv("HOST"),
-        user=os.getenv("USERNAME"),
+        username=os.getenv("USERNAME"),
         password=os.getenv("PASSWORD"),
         database=os.getenv("DATABASE"),
-        cursorclass=pymysql.cursors.DictCursor
     )
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Frame_genesis_entreprises74418917$*!'
 
-    connection.db.init_app(app)
+    db.init_app(app)
     login_manager = LoginManager()
     login_manager.login_view = 'auth.connexion'
     login_manager.init_app(app)
