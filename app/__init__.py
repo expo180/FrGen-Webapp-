@@ -10,7 +10,7 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     # Configure the database URI with the SSL certificate path
-    connection = db.pymysql.connect(
+    connection = pymysql.connect(
         host=os.getenv("HOST"),
         user=os.getenv("USERNAME"),
         password=os.getenv("PASSWORD"),
@@ -20,7 +20,7 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Frame_genesis_entreprises74418917$*!'
 
-    connection.init_app(app)
+    connection.db.init_app(app)
     login_manager = LoginManager()
     login_manager.login_view = 'auth.connexion'
     login_manager.init_app(app)

@@ -4,7 +4,6 @@ from .models import User
 from . import db
 from .forms import LoginForm, RegistrationForm, EmailForm, PasswordResetForm
 from flask_login import login_user, login_required, logout_user
-import pymysql.cursors
 
 auth = Blueprint('auth', __name__)
 
