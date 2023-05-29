@@ -16,7 +16,7 @@ def create_app():
         username=os.getenv("USERNAME"),
         password=os.getenv("PASSWORD"),
         database=os.getenv("DATABASE"),
-        ssl_cert=ssl_cert_path
+        ssl_cert=os.getenv("SSL_CERT")
     )
    
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
