@@ -10,11 +10,12 @@ def create_app():
     app = Flask(__name__)
 
     # Configure database credentials
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}'.format(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl_mode=VERIFY_IDENTITY&ssl={{"ca": "{ssl_cert}"}}'.format(
         host=os.environ.get('HOST'),
         username=os.environ.get('USERNAME'),
         password=os.environ.get('PASSWORD'),
         database=os.environ.get('DATABASE'),
+        ssl_cert=os.getenv("SSL_CERT"),
     )
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -39,10 +40,5 @@ def create_app():
     # blueprint for non-auth parts of app
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
-
-    # SSL configuration
-    app.config['SQLALCHEMY_DATABASE_URI'] += "?ssl_mode=VERIFY_IDENTITY&ssl={ca}".format(
-        ca=os.environ.get("SSL_CERT")
-    )
 
     return app
