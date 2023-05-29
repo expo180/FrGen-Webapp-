@@ -15,8 +15,7 @@ def create_app():
         username=os.environ.get('USERNAME'),
         password=os.environ.get('PASSWORD'),
         database=os.environ.get('DATABASE'),
-        ssl_mode = "VERIFY_IDENTITY",
-        ssl = { "ca": "/etc/ssl/cert.pem" }
+        ssl_ca=os.getenv("SSL_CERT")
      )
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
