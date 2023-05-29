@@ -4,7 +4,6 @@ from .models import User
 from . import db
 from .forms import LoginForm, RegistrationForm, EmailForm, PasswordResetForm
 from flask_login import login_user, login_required, logout_user
-from .banking_algorithms import account_id
 
 auth = Blueprint('auth', __name__)
 
@@ -51,13 +50,15 @@ def nouvel_utilisateur_post():
     password_hash = request.form.get('password_confirm')
 
     user = User.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
+    # Assuming you have the user object, you can access their bank account balance
+
 
     if user: # if a user is found, we want to redirect back to signup page so user can try again
         flash('Ce compte existe déja, Veuillez vous connecter directement')
         return redirect(url_for('auth.nouvel_utilisateur'))
 
     # create a new user with the form data. Hash the password so the plaintext version isn't saved.
-    new_user = User(email=email, first_name=first_name, last_name=last_name, password_hash=generate_password_hash(password_hash, method='sha256'), account_id=account_id)
+    new_user = User(email=email, first_name=first_name, last_name=last_name, password_hash=generate_password_hash(password_hash, method='sha256'))
 
     # add the new user to the database
     db.session.add(new_user)

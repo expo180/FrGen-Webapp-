@@ -2,6 +2,7 @@ from flask import Blueprint, render_template
 from . import db
 from .forms import LoginForm
 from flask_login import login_required, current_user
+from .models import BankAccount
 
 main = Blueprint('main', __name__)
 
@@ -182,7 +183,12 @@ def psycho():
 @main.route("/banque_virtuelle/")
 @login_required
 def bank():
-   return render_template('ekki_finance.html', owns=current_user.bank_net, username=current_user.first_name, account_id=current_user.account_id)
+    bank_account = current_user.bank_account
+    balance = bank_account.balance if bank_account else 0.0
+    account_number = current_user.account_number if current_user.account_number else ""
+    return render_template('ekki_finance.html', username=current_user.first_name, balance=balance, account_number=account_number)
+
+
 
 
 @main.route("/certifications/")

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Banque virtuelle - frame genesis</title>
+    <title>Banque Virtuelle - frame genesis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/ekki.css')}}">
@@ -20,7 +20,7 @@
                 <img src="{{url_for('static', filename='media/user.svg')}}" alt="" class="account-icon">
                 <div class="account-details">
                   <div class="account-owner">Nom:<strong>{{username}}</strong></div>
-                  <div class="account-id">ID compte:<strong>{{account_id}}</strong></div>
+                  <div class="account-id">ID compte:<strong>{{account_number}}</strong></div>
                 </div>
               </div>
               <a href=""><img src="{{url_for('static', filename='media/settings.png')}}" alt="" class="sets"></a>
@@ -28,7 +28,7 @@
             <div class="bank-first-line">
               <div class="account-info-one">
                 <div class="balance">Solde</div>
-                <div class="net-worth"></div>
+		<div class="net-worth">${{balance}}</div>
               </div>
             </div>
             <div class="banking-op">

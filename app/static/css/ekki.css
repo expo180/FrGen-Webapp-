@@ -12,7 +12,7 @@
     }
     .bank{
         background:none;
-        border:solid 2px var(--btn-bgcolor2);
+        border:none;
     }
     .his-i{
         width:100%;
