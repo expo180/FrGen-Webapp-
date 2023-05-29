@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+import json
 
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
@@ -9,14 +10,22 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
 
-    # Configure database credentials
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl={{"ca": "{ssl_cert}"}}'.format(
-        host=os.environ.get('HOST'),
-        username=os.environ.get('USERNAME'),
-        password=os.environ.get('PASSWORD'),
-        database=os.environ.get('DATABASE'),
-        ssl_cert=os.getenv("SSL_CERT"),
-    )
+# ...
+
+# Get the SSL certificate information from the environment variable
+     ssl_cert = os.getenv("SSL_CERT")
+
+     # Parse the SSL certificate information as a dictionary
+     ssl_cert_dict = json.loads(ssl_cert)
+
+     # Configure the database URI with the SSL certificate information
+     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl={{"ca": "{ssl_cert}"}}'.format(
+     host=os.environ.get('HOST'),
+     username=os.environ.get('USERNAME'),
+     password=os.environ.get('PASSWORD'),
+     database=os.environ.get('DATABASE'),
+     ssl_cert=ssl_cert_dict
+     )
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Frame_genesis_entreprises74418917$*!'
