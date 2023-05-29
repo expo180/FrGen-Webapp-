@@ -2,32 +2,27 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 import os
-from dotenv import load_dotenv
-import MySQLdb
+
+# Initialize SQLAlchemy so we can use it later in our models
+db = SQLAlchemy()
 
 def create_app():
-    load_dotenv()  # Load environment variables from .env file
-
     app = Flask(__name__)
-
-    # Establish database connection
-    connection = MySQLdb.connect(
+    
+    # Configure the database URI with the SSL certificate path
+    ssl_cert_path = "/etc/ssl/cert.pem"
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl_ca={ssl_cert}'.format(
         host=os.getenv("HOST"),
-        user=os.getenv("USERNAME"),
-        passwd=os.getenv("PASSWORD"),
-        db=os.getenv("DATABASE"),
-        autocommit=True,
-        ssl={
-            "ca": "/etc/ssl/cert.pem"
-        }
+        username=os.getenv("USERNAME"),
+        password=os.getenv("PASSWORD"),
+        database=os.getenv("DATABASE"),
+        ssl_cert=ssl_cert_path
     )
-
-    # Configure the database URI
-    app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+mysqldb://{os.getenv('USERNAME')}:{os.getenv('PASSWORD')}@{os.getenv('HOST')}/{os.getenv('DATABASE')}"
+   
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Frame_genesis_entreprises74418917$*!'
 
-    db = SQLAlchemy(app)
+    db.init_app(app)
     login_manager = LoginManager()
     login_manager.login_view = 'auth.connexion'
     login_manager.init_app(app)
