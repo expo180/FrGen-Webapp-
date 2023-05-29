@@ -10,13 +10,14 @@ def create_app():
     app = Flask(__name__)
 
     # Configure database credentials
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl_ca={ssl_ca}'.format(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}'.format(
         host=os.environ.get('HOST'),
         username=os.environ.get('USERNAME'),
         password=os.environ.get('PASSWORD'),
         database=os.environ.get('DATABASE'),
-        ssl_ca=os.environ.get('SSL_CA', '/etc/ssl/cert.pem')
-    )
+        ssl_mode = "VERIFY_IDENTITY",
+        ssl = { "ca": "/etc/ssl/cert.pem" }
+     )
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Frame_genesis_entreprises74418917$*!'

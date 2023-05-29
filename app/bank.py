@@ -10,7 +10,3 @@ def generate_bank_id():
     bank_id += ''.join(random.choice(uppercase_characters + string.digits) for _ in range(6)).lower()  # Segment 2
 
     return bank_id
-
-# Example usage
-bank_id = generate_bank_id()
-print("Bank ID:", bank_id)
