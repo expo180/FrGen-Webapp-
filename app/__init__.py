@@ -10,7 +10,7 @@ def create_app():
     app = Flask(__name__)
 
     # Configure database credentials
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl_mode=VERIFY_IDENTITY&ssl={{"ca": "{ssl_cert}"}}'.format(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{username}:{password}@{host}/{database}?ssl={{"ca": "{ssl_cert}"}}'.format(
         host=os.environ.get('HOST'),
         username=os.environ.get('USERNAME'),
         password=os.environ.get('PASSWORD'),
