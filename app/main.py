@@ -168,7 +168,7 @@ def dashboard():
 @main.route("/profil_psychologique/")
 @login_required
 def statistics():
-   return render_template('profil.html', username=current_user.first_name)
+   return render_template('profil.html', username=current_user.first_name, IQ=current_user.iq)
 
 @main.route("/mes_cours/")
 @login_required

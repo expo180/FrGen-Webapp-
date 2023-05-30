@@ -11,7 +11,10 @@
         gap:0.2em;
     }
     .bank{
-        background:none;
+        background-image:url('<a href="https://www.vecteezy.com/free-vector/background">Background Vectors by Vecteezy</a>');
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size: cover;
         border:none;
     }
     .his-i{

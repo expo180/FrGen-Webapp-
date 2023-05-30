@@ -39,7 +39,7 @@ class User(UserMixin, db.Model):
     first_name = db.Column(db.String(64), nullable=False)
     last_name = db.Column(db.String(64), nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
-    iq = db.Column(db.Integer)
+    iq = db.Column(db.Integer, default=0)
     eq = db.Column(db.Integer)
     skills_avg = db.Column(db.Integer)
     games_avg = db.Column(db.Integer)
