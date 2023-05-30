@@ -7,19 +7,20 @@ import datetime
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(64), unique=True, index=True, nullable=False)
-    first_name = db.Column(db.String(64), index=True, nullable=False)
-    last_name = db.Column(db.String(64), index=True, nullable=False)
+    email = db.Column(db.String(64), unique=True, nullable=False)
+    first_name = db.Column(db.String(64), nullable=False)
+    last_name = db.Column(db.String(64), nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
-    iq = db.Column(db.Integer, index=True)
-    eq = db.Column(db.Integer, index=True)
-    skills_avg = db.Column(db.Integer, index=True)
-    games_avg = db.Column(db.Integer, index=True)
-    honors = db.Column(db.Enum('prodige', 'penseur créatif', 'quasi-génie'))
+    iq = db.Column(db.Integer)
+    eq = db.Column(db.Integer)
+    skills_avg = db.Column(db.Integer)
+    games_avg = db.Column(db.Integer)
+    honors = db.Column(db.Enum('prodige', 'penseur créatif', 'quasi-génie', name='honors_enum'))
     account_number = db.Column(db.String(20), unique=True, nullable=False, default=generate_bank_id)
 
     bank_account = db.relationship('BankAccount', backref='user', uselist=False)
-    courses = db.relationship('Courses', secondary='enrollments', backref='users')
+    courses = db.relationship('Course', secondary='enrollments', backref='users')
+
 
 class BankAccount(db.Model):
     __tablename__ = 'bank_accounts'
