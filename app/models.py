@@ -24,26 +24,10 @@ class User(UserMixin, db.Model):
 class BankAccount(db.Model):
     __tablename__ = 'bank_accounts'
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    user_id = db.Column(db.Integer, nullable=False)
     balance = db.Column(db.Float, default=0.0)
     transactions = db.relationship('Transaction', backref='bank_account')
 
-class Transaction(db.Model):
-    __tablename__ = 'transactions'
-    id = db.Column(db.Integer, primary_key=True)
-    amount = db.Column(db.Float, nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.datetime.now().time())
-    bank_account_id = db.Column(db.Integer, db.ForeignKey('bank_accounts.id'), nullable=False)
-
-# Rest of the code remains the same
-
-# Defines the enrollments table for the many-to-many relationship between users and courses
-enrollments = db.Table('enrollments',
-    db.Column('user_id', db.Integer, db.ForeignKey('users.id'), primary_key=True),
-    db.Column('course_id', db.Integer, db.ForeignKey('courses.id'), primary_key=True)
-)   
-
-# Defines the courses table
 class Courses(db.Model):
     __tablename__ = 'courses'
     id = db.Column(db.Integer, primary_key=True)
@@ -62,49 +46,3 @@ class Courses(db.Model):
     pictures = db.Column(db.String(255))
     ENG = db.Column(db.String(255))
     FR = db.Column(db.String(255))
-
-# Defines the items table for the shop
-class Items(db.Model):
-    __tablename__ = 'items'
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.Text(), nullable=False)
-    description = db.Column(db.Text(), nullable=False)
-    price = db.Column(db.Float, nullable=False)
-    left = db.Column(db.Integer, nullable=False)
-    pictures = db.Column(db.String(255), nullable=False)
-
-# Defines the songs table
-class Songs(db.Model):
-    __tablename__ = 'songs'
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(255), index=True, nullable=False)
-    singer = db.Column(db.String(62), index=True, nullable=False)
-    description = db.Column(db.Text(), nullable=False)
-    song = db.Column(db.Text(), nullable=False)
-    biography = db.Column(db.Text(), nullable=False)
-    picture = db.Column(db.String(255), nullable=False)
-    community = db.Column(db.BigInteger, index=True, nullable=False)
-
-# Defines the books table
-class Books(db.Model):
-    __tablename__ = 'books'
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.Text(), nullable=False)
-    author = db.Column(db.String(68), index=True, nullable=False)
-    description = db.Column(db.Text(), nullable=False)
-    biography = db.Column(db.Text(), nullable=False)
-    picture = db.Column(db.String(255), nullable=False)
-
-# Defines the applications table for instructors and prospective employees
-class Applications(db.Model):
-    __tablename__ = 'applications'
-    id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(64), index=True, nullable=False)
-    last_name = db.Column(db.String(64), index=True, nullable=False)
-    email = db.Column(db.String(64), index=True, nullable=False)
-    github = db.Column(db.Text())
-    essay_one = db.Column(db.Text(), nullable=False)
-    essay_two = db.Column(db.Text(), nullable=False)
-    essay_three = db.Column(db.Text(), nullable=False)
-    resume = db.Column(db.String(255), nullable=False)
-
