@@ -34,3 +34,4 @@ pymysql
 email_validator
 flask-change-password
 mysql-connector-python
+psycopg2>=2.9.1
