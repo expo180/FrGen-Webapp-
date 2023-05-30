@@ -9,7 +9,7 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     # Configure the database URI with the SSL certificate path
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{username}:{password}@{host}/{database}'.format(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@{host}/{database}'.format(
         host=os.getenv("HOST"),
         username=os.getenv("USERNAME"),
         password=os.getenv("PASSWORD"),
