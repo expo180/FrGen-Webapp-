@@ -2,7 +2,7 @@ from flask import Blueprint, render_template
 from . import db
 from .forms import LoginForm
 from flask_login import login_required, current_user
-from models import BankAccount
+from .models import BankAccount
 
 main = Blueprint('main', __name__)
 
