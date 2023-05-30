@@ -4,6 +4,34 @@ from . import db
 from .bank import generate_bank_id
 import datetime
 
+# Defines the enrollments table for the many-to-many relationship between users and courses
+enrollments = db.Table('enrollments',
+    db.Column('user_id', db.Integer, db.ForeignKey('users.id'), primary_key=True),
+    db.Column('course_id', db.Integer, db.ForeignKey('courses.id'), primary_key=True)
+)
+
+# Defines the courses table
+class Course(db.Model):
+    __tablename__ = 'courses'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.Text(), nullable=False)
+    description = db.Column(db.Text(), nullable=False)
+    main_course = db.Column(db.Text(), nullable=False)
+    quizz = db.Column(db.Text(), nullable=False)
+    exercises = db.Column(db.Text(), nullable=False)
+    projects = db.Column(db.Text(), nullable=False)
+    price = db.Column(db.Float(15, 9), index=True, default=2.0)
+    author = db.Column(db.String(255), nullable=False)
+    specialization = db.Column(db.String(255), nullable=False)
+    company = db.Column(db.String(155))
+    intros = db.Column(db.String(255))
+    videos = db.Column(db.String(255))
+    pictures = db.Column(db.String(255))
+    ENG = db.Column(db.String(255))
+    FR = db.Column(db.String(255))
+
+# Rest of the code remains the same
+
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
@@ -38,31 +66,6 @@ class Transaction(db.Model):
 
 # Rest of the code remains the same
 
-# Defines the enrollments table for the many-to-many relationship between users and courses
-enrollments = db.Table('enrollments',
-    db.Column('user_id', db.Integer, db.ForeignKey('users.id'), primary_key=True),
-    db.Column('course_id', db.Integer, db.ForeignKey('courses.id'), primary_key=True)
-)   
-
-# Defines the courses table
-class Courses(db.Model):
-    __tablename__ = 'courses'
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.Text(), nullable=False)
-    description = db.Column(db.Text(), nullable=False)
-    main_course = db.Column(db.Text(), nullable=False)
-    quizz = db.Column(db.Text(), nullable=False)
-    exercises = db.Column(db.Text(), nullable=False)
-    projects = db.Column(db.Text(), nullable=False)
-    price = db.Column(db.Float(15, 9), index=True, default=2.0)
-    author = db.Column(db.String(255), nullable=False)
-    specialization = db.Column(db.String(255), nullable=False)
-    company = db.Column(db.String(155))
-    intros = db.Column(db.String(255))
-    videos = db.Column(db.String(255))
-    pictures = db.Column(db.String(255))
-    ENG = db.Column(db.String(255))
-    FR = db.Column(db.String(255))
 
 # Defines the items table for the shop
 class Items(db.Model):
